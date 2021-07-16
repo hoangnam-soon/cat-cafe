@@ -17,7 +17,7 @@ export default function SimpleBreadcrumbs() {
       <Link color="inherit" href="/Item/" onClick={handleClick}>
         Sản phẩm
       </Link>
-      <Typography color="textPrimary">Thức ăn khô</Typography>
+      <Typography color="textPrimary">Cafe</Typography>
     </Breadcrumbs>
   );
 }

@@ -47,34 +47,61 @@ const useStyles = makeStyles({
    },
   
    menuLeft : {
-        backgroundColor:'#f3c7c7',
+        
         height: '600px',
         position : 'sticky',
         top : '60px',
         '@media (max-width : 1200px)':{
-             display : 'flex',
-             height : 'fit-content',
-             marginLeft : '18px'
-               
-          },
-          '@media (max-width: 768px )':{
-            display: '-webkit-box',
-            overflow: 'scroll',
-            height : 'fit-content',
-            marginLeft : 10,
-          },
-         '@media (max-width : 576px)':{
-            
-          marginLeft : '5px',
-          
-
+          display : 'flex',
+          height : 'fit-content',
+          marginLeft : '0px'
             
        },
+       '@media (max-width: 768px )':{
+         display: '-webkit-box',
+         overflow: 'scroll',
+         height : 'fit-content',
+        //  marginLeft : 10,
+       },
+      '@media (max-width : 576px)':{
+         
+      //  marginLeft : '5px',
+       
+    
+         
+    },
+        
+
+      
         
         
         
         
 
+   },
+   boxmenuLeft : {
+    backgroundColor:'#f3c7c7',
+    height: '600px',
+    margin :10,
+    '@media (max-width : 1200px)':{
+      display : 'flex',
+      height : 'fit-content',
+      // marginLeft : '18px'
+        
+   },
+   '@media (max-width: 768px )':{
+     display: '-webkit-box',
+     overflow: 'scroll',
+     height : 'fit-content',
+     marginLeft : 0
+   },
+  '@media (max-width : 576px)':{
+     
+   marginLeft : '5px',
+   
+
+     
+},
    },
    titleLeft : {
 //     '&:after':{
@@ -136,8 +163,8 @@ const Phukien = () => {
            <div>
                 <Grid className={classes.wrapBox} container spacing={0} >
                     <Grid className={classes.menuLeft} item xs={11} lg = {3}  >
-                   
-                    {
+                   <div className={classes.boxmenuLeft}>
+                   {
                         petitem.map((item,index)=>{
                            
                             return(
@@ -145,6 +172,8 @@ const Phukien = () => {
                             )
                         })
                      }
+                   </div>
+                    
                    
                     
                     </Grid>

@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from '../../componets/common/Header';
 import Footer from '../../componets/common/Footer';
-import Detail from '../../componets/ui/Detail';
+import Cartscreen from '../../componets/ui/Cartscreen'
+
 
 
 const Cart = () => {
@@ -9,7 +10,7 @@ const Cart = () => {
     return (
         <>
             <Header />
-            <Detail/>
+            <Cartscreen/>
             <Footer />
         </>
     )

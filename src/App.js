@@ -11,6 +11,8 @@ import Item from './pages/Item';
 import Petitem from "./pages/Petitem";
 import Blog from "./pages/Blog";
 import Cart from "./pages/Cart";
+import Deatilsanpham from './pages/Detailsanpham';
+import Detailphukien from "./pages/Detailphukien";
 
 
 
@@ -37,6 +39,13 @@ return (
         <Route path ="/Cart/">
           <Cart/>
         </Route>
+        <Route path ="/Detail-item/">
+          <Deatilsanpham/>
+        </Route>
+        {/* <Route path ="/Detail-pet-item/">
+          <Deatailphukien/>
+        </Route> */}
+
 
       </Switch>
   </Router>

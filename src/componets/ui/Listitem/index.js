@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { sanpham } from '../../../assets/images/Item';
+import { useHistory } from "react-router-dom";
+import {saveToLocal} from '../../../ulits';
 
 const useStyles =makeStyles({
 
@@ -15,12 +17,24 @@ const useStyles =makeStyles({
         "&:hover": {
           transform: "scale(1.03)"
         },
+        "@media (max-width:1475px)":{
+          maxWidth : 210
+           
+         },
+         "@media (max-width:1200px)":{
+          maxWidth : 255
+           
+         },
         "@media (max-width:768px)":{
-         maxWidth : 210
+         maxWidth : 222
           
         },
         "@media (max-width:576px)":{
-          maxWidth : 153
+          maxWidth : 172
+           
+         },
+        "@media (max-width:400px)":{
+          maxWidth : 162
            
          },
         //  "@media (max-width:375px)":{
@@ -30,6 +44,9 @@ const useStyles =makeStyles({
 
 
 
+    },
+    overimg : {
+      overflow : 'hidden'
     },
     inforTitle:{
         padding: '12px 15px',
@@ -70,6 +87,10 @@ const useStyles =makeStyles({
         fontFamily: 'Oswald',
         fontWeight:'500',
         textTransform: 'uppercase',
+        transition : 'all 0.4s',
+        '&:hover':{
+          color : '#EA8025'
+        },
         
         "@media (max-width:1200px)":{
           // margin : '10px 20px',
@@ -202,6 +223,14 @@ const useStyles =makeStyles({
 
 const Listitem = () => {
 
+  let history = useHistory();
+  
+  const handClick = (item) => {
+
+    saveToLocal('detail-item',item);
+    history.push("/Detail-item/");
+  }
+
   const classes = useStyles();
 
     const renderlistData= (list) =>{
@@ -210,8 +239,8 @@ const Listitem = () => {
             {
                 list.length && list.map((it,index)=>{
                     return(<><Grid classes={{"grid-xs-6":classes.backgroundItem}}  item xs={6} lg={4}>
-                            <div>
-                            <div><Link><img className={classes.images} src={it.img} alt="" /></Link></div>
+                            <div onClick={() => handClick(it)}>
+                            <div className={classes.overimg}><Link><img className={classes.images} src={it.img} alt="" /></Link></div>
                             <div className={classes.inforTitle}>
                                 <h3 className={classes.h3title}><Link className={classes.titleItem1}>{it.title}</Link></h3>
                                 <div className={classes.titleItem2}>{it.price}</div>

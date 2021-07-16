@@ -3,8 +3,12 @@ import { makeStyles } from '@material-ui/core';
 import { Dialog } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
+
+
 const useStyles =makeStyles({
-  
+  // margin: {
+  //   margin: theme.spacing(1),
+  // },
   heightAll : {
     maxHeight: 'unset',
     width :320
@@ -15,6 +19,10 @@ const useStyles =makeStyles({
     padding: '3px 7px',
     position: 'absolute',
     right : 5,color:'white',
+    '&:hover' : {
+      color : '#EA8025',
+      cursor: 'pointer',
+    }
   },
   imgLogin :{
     width :'100%',
@@ -49,6 +57,10 @@ const useStyles =makeStyles({
   textTransform: "none",
   float: "right",
   marginTop:'10px',
+  '&:hover' : {
+    color : '#EA8025',
+    cursor: 'pointer',
+  }
   
   },
   loginButton :{
@@ -81,12 +93,21 @@ fontSize: "14px",
 textTransform: "none",
 float: "right",
 margin:'10px',
+'&:hover' : {
+  color : '#EA8025',
+  cursor: 'pointer',
+}
 
 },
 loginIcon : {
   color :'black',
   fontSize : '30px',
-  marginLeft: 10
+  marginLeft: 10,
+  '&:hover' : {
+    color : '#EA8025',
+    cursor: 'pointer',
+  }
+  
 }
     
 })
@@ -115,9 +136,11 @@ const Login = ({open,closeLogin}) => {
               <span className={classes.userIcon}><i class="fas fa-user-circle"></i></span>
               <input className={classes.userInput} type='text' placeholder="Email"></input>
             </div>
+           
             <div className={classes.userInputMain}>
               <span className={classes.userIcon}><i class="fas fa-lock"></i></span>
               <input className={classes.userInput} type='text' placeholder=""></input>
+             
             </div>
             
           </form>

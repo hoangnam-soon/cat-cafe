@@ -13,6 +13,16 @@ const useStyles = makeStyles ({
         width : '100%',
         
     },
+    imageCat : {
+        width : '100%',
+        transition : 'all 0.5s',
+          "&:hover": {
+            transform: "scale(1.03)"
+          },
+    },
+    overimg : {
+        overflow : 'hidden'
+      },
     wrapTitle : {
         padding: '30px 0px !important',
         alignItems: 'center',
@@ -60,10 +70,7 @@ const useStyles = makeStyles ({
       cat : {
           position: "relative",
           padding :3,
-          transition : 'all 0.5s',
-          "&:hover": {
-            transform: "scale(1.03)"
-          },
+          
           '@media (max-width : 1200px)':{
             padding : 10
         
@@ -99,6 +106,9 @@ const useStyles = makeStyles ({
         fontFamily: 'Oswald',
         color: 'white',
         width: 'fit-content',
+      },
+      textcontent :{
+          fontFamily : 'Pacifico',
       }
       
 
@@ -128,9 +138,9 @@ const Storescreen = () => {
 
                               return(
                                   <Grid className={classes.cat} item xs={6} lg={4}>
-                                      <div><img className={classes.image} src={item.img} alt="" /></div>
+                                      <div className={classes.overimg}><img className={classes.imageCat} src={item.img} alt="" /></div>
                                       <h3 className={classes.h3title}>{item.title}</h3>
-                                    <div className={classes.iconheart}><i class="far  fa-heart"></i></div>  
+                                    {/* <div className={classes.iconheart}><i class="far  fa-heart"></i></div>   */}
                                   </Grid>
                               )
                           })
@@ -144,8 +154,8 @@ const Storescreen = () => {
                     <Grid className={classes.titleplace} container spacing={0}>
                         <Grid className={classes.wraptitleblog} item lg ={6}xs = {12}>
                             <h3 className={classes.titleblog}>chào mừng đến với Black Cat Cafe</h3>
-                            <p>Bước chân vào cửa hàng, trước mắt bạn là quầy phục vụ.Ở đây chung tôi thiết kể không gian kể cả khi bạn trong lúc chờ đợi gọi đồ cũng có thể được ngắm nhìn Boss của quán. 
-                            Với lòng nhiệt tình hiếu khách chắc chắn bạn sẽ không bao giờ quên</p>
+                            <p className={classes.textcontent}>Bước chân vào cửa hàng, trước mắt bạn là quầy phục vụ.Ở đây chung tôi thiết kể không gian kể cả khi bạn trong lúc chờ đợi gọi đồ cũng có thể được ngắm nhìn Boss của quán. 
+                            Với lòng nhiệt tình hiếu khách chắc chắn bạn sẽ không bao giờ quên.</p>
                         </Grid>
                         <Grid item lg={6} xs = {12}>
                              <div><img className={classes.image} src="https://github.com/hoangnam-soon/hoangnam-soon.github.io/blob/main/Cat-Cafe/img/Banner/cafe-meo-lizzy-house.jpg?raw=true" alt="" /></div>

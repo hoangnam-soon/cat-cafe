@@ -94,9 +94,13 @@ const useStyles = makeStyles({
       },
 
       iconitem : {
-          fontSize: "x-large",
-          marginRight : 10,
-      },
+        fontSize: "x-large",
+        marginRight : 10,
+        cursor: 'pointer'
+       }, 
+       iconnumber : {
+        marginRight : 10,
+       },
       putinButton :{
         '&:hover':{
           backgroundPosition: 'left',
@@ -171,12 +175,12 @@ const useStyles = makeStyles({
 
 
 
-const Detail = () => {
+const Detailpetitem = () => {
 
       const classes = useStyles();
 
 
-      const renderDetail = () =>{
+      const renderDetailpetitem = () =>{
 
           return(<>
                <Grid item lg={6} sm={4} xs={12}>
@@ -189,7 +193,7 @@ const Detail = () => {
                    <div className={classes.titleitem}>Tình trạng : <span className={classes.priceitem}>Còn hàng</span></div>
                    <div>
                        <span className={classes.iconitem}><i class="far fa-minus-square"></i></span>
-                       <span className={classes.iconitem}>1</span>
+                       <span className={classes.iconnumber}>1</span>
                        <span className={classes.iconitem}><i class="far fa-plus-square"></i></span>
                    </div>
                    <button className={classes.putinButton}>thêm vào giỏ hàng</button>
@@ -235,8 +239,8 @@ const Detail = () => {
                           <BreadCrumbs/>
 
 
-                          <Grid className={classes.allDetail} container spacing ={0}>
-                                    {renderDetail()}
+                          <Grid className={classes.allDetailpetitem} container spacing ={0}>
+                                    {renderDetailpetitem()}
 
                                 <Grid className={classes.wrapinfor} item lg={8}>
                                     <div className={classes.titleinfor}>
@@ -280,4 +284,4 @@ const Detail = () => {
         
     )
 }
-export default Detail
+export default Detailpetitem

@@ -46,8 +46,8 @@ const useStyles = makeStyles({
    },
   
    menuLeft : {
-        backgroundColor:'white',
-        height: '341px',
+        
+         height: '400px',
         position : 'sticky',
         top : '60px',
         '@media (max-width : 1200px)':{
@@ -76,6 +76,36 @@ const useStyles = makeStyles({
         
         
         
+
+   },
+
+   boxmenuLeft: {
+    backgroundColor:'white',
+    height: '400px',
+    margin : '10px',
+    '@media (max-width : 1200px)':{
+      display : '-webkit-box',
+      height : 'fit-content',
+      marginLeft : '0px',
+      overflow: 'scroll',
+
+        
+   },
+//    '@media (max-width : 768px)':{
+     
+//      marginLeft : '10px',
+     
+
+       
+//   },
+//   '@media (max-width : 576px)':{
+     
+//    marginLeft : '5px',
+   
+
+     
+// },
+    
 
    },
    titleLeft : {
@@ -137,8 +167,8 @@ const Sanpham = () => {
           <div><img className={classes.imageBanner} src="https://hoangnam-soon.github.io/Cat-Cafe/img/Banner/item-banner-3.jpeg" alt="" /></div>
            <div>
                 <Grid className={classes.wrapBox} container spacing={0} >
-                    <Grid className={classes.menuLeft}  item xs={8} lg = {3}  > 
-                    
+                    <Grid className={classes.menuLeft}  item xs={9} sm={8} lg = {3}  > 
+                    <div className={classes.boxmenuLeft}>
                     {
                         sanpham.map((item,index)=>{
                            
@@ -147,6 +177,8 @@ const Sanpham = () => {
                             )
                         })
                      }
+                    </div>
+                    
                 
                      
                     </Grid>

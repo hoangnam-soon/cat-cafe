@@ -54,7 +54,7 @@ const useStyles =makeStyles ({
       fontFamily: 'Oswald',
       color: '#EA8025',
       width: 'fit-content',
-      margin : '30px 0px',
+      margin : '30px 20px',
       '@media (max-width : 576px)':{
         fontSize:'20px',
         margin : '30px 10px'
@@ -94,6 +94,7 @@ const useStyles =makeStyles ({
     },
     backgroundBlog : {
         backgroundColor : 'white',
+        padding :3,
         
     },
     h3 : {

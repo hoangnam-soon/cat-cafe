@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useRef } from 'react';
 import { makeStyles,Icon } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import Menu from '../Menu';
@@ -16,23 +16,41 @@ const useStyles =makeStyles({
     justifyContent: "space-evenly",
     backgroundColor: "black"
  },
+ divlog : {
+     "@media (max-width : 768px)": {
+            margin : 'auto',
+        }
+ },
  logo : {
      height : 60,
  },
  headerRight : {
     margin: '15px',
     display : 'inline-flex',
-    "@media (max-width : 768px)": {
-        display: 'none',
-    }
+    
  },
- headerIcon : {
+ searchIcon : {
      fontSize : 18,
      color : 'white',
      overflow: 'inherit',
      width: 'auto',
-     margin : '5px',
+     margin : '7px',
+     "@media (max-width : 768px)": {
+        display: 'none',
+    }
+     
  },
+ cartIcon : {
+    fontSize : 18,
+    color : 'white',
+    overflow: 'inherit',
+    width: 'auto',
+    margin : '5px',
+    "@media (max-width : 768px)": {
+       position : 'absolute',
+       right : 20
+    }
+},
  login : {
     '&:hover':{
         backgroundPosition: 'left',
@@ -67,14 +85,14 @@ const useStyles =makeStyles({
 
 
 
-});
+ });
 
 
 
 
 const Header = ({activeMenu}) => {
     const classes = useStyles();
-
+   
 
     const [showSearchBox, setShowSearchBox] = useState(false)
     const [isOpenLogin, setIsOpenLogin] = useState(false)
@@ -100,18 +118,25 @@ const Header = ({activeMenu}) => {
         }
     ]
 
+    const onClickOutSideSearchBox = (e) => {
+        console.log(e)
+        // check xem co phai nut search ko 
+        setShowSearchBox(false)
+
+        // e.value.path[0] == setShowSearchBox() ? setShowSearchBox(true)
+    }
     return(
         <div className = {classes.mainHeader}>
         <Icon onClick={()=> setIsShowBar(!isShowBar)} classes={{root:classes.barIcon}} className="fas fa-bars"></Icon>
-            <div><Link to='/'><img className={classes.logo} src='https://hoangnam-soon.github.io/Cat-Cafe/img/logo4.png'></img></Link></div>
+            <div className={classes.divlog}><Link to='/'><img className={classes.logo} src='https://hoangnam-soon.github.io/Cat-Cafe/img/logo4.png'></img></Link></div>
             <Menu activeMenu={activeMenu} isShowBar={isShowBar} closeBar={()=>setIsShowBar(!isShowBar)} dataList={menu}/>
             {
-                showSearchBox && <SearchBox/>
+                showSearchBox &&  <SearchBox closeSearch={(e) => onClickOutSideSearchBox(e)}/> 
             }
             
             <div className={classes.headerRight}>
-            <Icon className="fas fa-search default-icon" classes ={{root:classes.headerIcon}} style={{color:'white'}}  onClick={() =>setShowSearchBox(!showSearchBox)}/>
-            <Link to ='/Cart/'><Icon className= "fas fa-shopping-cart default-icon" classes ={{root:classes.headerIcon}} style={{color:'white'}}   /></Link> 
+            <Link to ='/Cart/'><Icon className= "fas fa-shopping-cart default-icon" classes ={{root:classes.cartIcon}} style={{color:'white'}}   /></Link> 
+            <Icon className="fas fa-search default-icon" classes ={{root:classes.searchIcon}} style={{color:'white'}}  onClick={() =>setShowSearchBox(!showSearchBox)}/>
             <button  onClick={()=>setIsOpenLogin(!isOpenLogin)} className={classes.login}>Đăng nhập</button>
             
              <Login open={isOpenLogin} closeLogin={()=>setIsOpenLogin(!isOpenLogin)}/>

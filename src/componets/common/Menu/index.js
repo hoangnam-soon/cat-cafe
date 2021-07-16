@@ -14,6 +14,7 @@ import clsx from 'clsx';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
 // import { Icon } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles({
     // root: {
@@ -33,7 +34,7 @@ const useStyles = makeStyles({
    menuBar : {
     
         display: "grid",
-        margin :'20px',
+        margin :'10px',
         '& a' : {
             color :'black',
             fontSize: "14px", 
@@ -47,9 +48,9 @@ const useStyles = makeStyles({
        
    },
    paper : {
-       width : '40%',
-       height :'300px',
-       top :60
+       width : '50%',
+       height :'50%',
+       
    },
    login : {
     '&:hover':{
@@ -75,7 +76,9 @@ const useStyles = makeStyles({
 
  },
  search : {
-     margin : '10px 30px'
+     margin : '30px 20px',
+     padding : '2px 10px'
+
  }
   });
 
@@ -151,6 +154,13 @@ const Menu = ({dataList,isShowBar,closeBar, activeMenu}) => {
             <Drawer classes={{paper:classes.paper}} anchor={'left'} open={isShowBar} onClose={()=> closeBar()}>
 
             <input className={classes.search} type='text' placeholder="Search"></input>
+            {/* <div>
+            <form  noValidate autoComplete="off">
+            
+            <TextField id="outlined-basic" label="Outlined" variant="Search" />
+            </form>
+            </div> */}
+            
             <ul className={classes.menuBar}>
                 {
                     renderMenu()

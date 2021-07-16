@@ -28,13 +28,16 @@ const useStyles = makeStyles((theme) => ({
     width : '100%',
     transition : 'all 0.4s',
     "&:hover" : {
-      transform: "scale(1.02)"
+      transform: "scale(1.04)"
     },
     '@media (max-width : 1200px)':{
       maxWidth : "none"
   
     },
    
+  },
+  overimg : {
+    overflow : 'hidden'
   },
    wrapTitle : {
     padding: '30px 25px !important',
@@ -114,6 +117,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Oswald',
     fontWeight:'500',
     marginLeft : 10,
+    transition : 'all 0.4s',
+    '&:hover' : {
+      color : '#EA8025'
+    },
     // "@media (max-width:768px)":{
     //   margin : '10px '
       
@@ -214,7 +221,8 @@ lineHeight:1.4,
 },
 backgroundItem : {
   backgroundColor : 'white'
-}
+},
+
 
   
 
@@ -242,7 +250,7 @@ export default function Itemhomepage() {
                       <>
                       <Grid  item xs={6} lg={4}>
                             <div className={classes.backgroundItem}>
-                                <div><Link><img className={classes.images} src={item.img} alt="" /></Link></div>
+                                <div className={classes.overimg}><Link><img className={classes.images} src={item.img} alt="" /></Link></div>
                                 <div className={classes.inforTitle}>
                                     <h3 className={classes.h3title}><Link className={classes.titleItem1}>{item.title}</Link></h3>
                                     <div className={classes.titleItem2}>{item.price}</div>
