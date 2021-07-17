@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   position: "absolute",
   top: "30px",
   margin: "15px",
-  fontFamily: "'Oswald', sans-serif",
+  fontFamily : 'Pacifico',
   fontWeight: 500,
   "@media (max-width:1400px)":{
     fontSize: "25px",

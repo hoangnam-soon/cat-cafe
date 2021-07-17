@@ -80,6 +80,7 @@ const useStyles = makeStyles ({
           position : 'absolute',
           top : -10,
           left : 20,
+          fontFamily : 'Pacifico',
         
       },
       iconheart : {
