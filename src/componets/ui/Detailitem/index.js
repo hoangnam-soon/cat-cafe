@@ -35,7 +35,17 @@ const useStyles = makeStyles({
       transition : 'all 0.4s',
       "&:hover" : {
         transform: "scale(1.04)"
+      }, 
+      '@media (max-width : 1024px)':{
+        maxWidth : 400
+    
       },
+      '@media (max-width : 768px)':{
+        maxWidth : 280
+    
+      },
+      
+
       '@media (max-width : 576px)':{
         maxWidth : 165
     
@@ -237,10 +247,10 @@ const useStyles = makeStyles({
     },
     another : {
       marginTop :40,
-      padding :'10px 50px',
-      // "@media (max-width:768px)":{
-      //   padding : '10px 50px'
-      //  },
+      padding :'10px 0px',
+      "@media (max-width:768px)":{
+        padding : '10px 50px'
+       },
        "@media (max-width:576px)":{
         padding : ' 0px'
        },
@@ -332,7 +342,7 @@ const Detailitem = () => {
               itemHome.length && itemHome.map((item,index)=>{
                     return(
                       <>
-                      <Grid  item xs={6} lg={4}>
+                      <Grid  item xs={6} sm={6} lg={4} >
                             <div className={classes.backgroundItem} onClick={()=> handClick(item)}>
                                 <div className={classes.overimg}><Link><img className={classes.images} src={item.img} alt="" /></Link></div>
                                 <div className={classes.inforTitle}>

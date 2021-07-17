@@ -33,6 +33,16 @@ const useStyles = makeStyles({
       "&:hover" : {
         transform: "scale(1.04)"
       },
+      '@media (max-width : 1024px)':{
+        maxWidth : 400
+    
+      },
+      '@media (max-width : 768px)':{
+        maxWidth : 280
+    
+      },
+      
+
       '@media (max-width : 576px)':{
         maxWidth : 165
     
@@ -235,7 +245,13 @@ const useStyles = makeStyles({
     },
     another : {
         marginTop :40,
-        padding :'10px 50px',
+        padding :'10px 0px',
+        "@media (max-width:1024px)":{
+          padding :'10px 30px',
+         },
+        "@media (max-width:768px)":{
+          padding :'10px 0px',
+         },
         "@media (max-width:576px)":{
           padding : '0px'
          },
