@@ -362,7 +362,7 @@ const Detailitem = () => {
       };
 
     return (<div>
-              <div><img className={classes.img} src="https://github.com/hoangnam-soon/hoangnam-soon.github.io/blob/main/Cat-Cafe/img/Banner/banner-taycoffee-3.jpg?raw=true" alt="" /></div>
+              {/* <div><img className={classes.img} src="https://github.com/hoangnam-soon/hoangnam-soon.github.io/blob/main/Cat-Cafe/img/Banner/banner-taycoffee-3.jpg?raw=true" alt="" /></div> */}
               
               <div className={classes.root}>
                     <Grid container spacing={0}>
