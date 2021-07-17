@@ -2,8 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-
-import {itemHome} from '../../../assets/images/Item'
+import { useHistory } from "react-router-dom";
+import {saveToLocal} from '../../../ulits';
+import {itemHome} from '../../../assets/images/Item';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -233,7 +234,13 @@ backgroundItem : {
 
 export default function Itemhomepage() {
   const classes = useStyles();
+  let history = useHistory();
+  
+  const handClick = (item) => {
 
+    saveToLocal('detail-item',item);
+    history.push("/Detail-item/");
+  }
   return (
     <div className={classes.root}>
     <Grid container spacing={3} classes={{"spacing-xs-3":classes.spacing}}>
@@ -249,12 +256,12 @@ export default function Itemhomepage() {
                     return(
                       <>
                       <Grid  item xs={6} lg={4}>
-                            <div className={classes.backgroundItem}>
+                            <div className={classes.backgroundItem} onClick={()=>handClick(item)}>
                                 <div className={classes.overimg}><Link><img className={classes.images} src={item.img} alt="" /></Link></div>
                                 <div className={classes.inforTitle}>
-                                    <h3 className={classes.h3title}><Link className={classes.titleItem1}>{item.title}</Link></h3>
+                                    <h3 className={classes.h3title} onClick={()=>handClick(item)}><Link className={classes.titleItem1}>{item.title}</Link></h3>
                                     <div className={classes.titleItem2}>{item.price}</div>
-                                    <Link className={classes.buyButton}>mua ngay</Link>
+                                    <Link className={classes.buyButton} onClick={()=>handClick(item)}>mua ngay</Link>
                                 </div>
 
                             </div>

@@ -242,9 +242,9 @@ const Listitem = () => {
                             <div onClick={() => handClick(it)}>
                             <div className={classes.overimg}><Link><img className={classes.images} src={it.img} alt="" /></Link></div>
                             <div className={classes.inforTitle}>
-                                <h3 className={classes.h3title}><Link className={classes.titleItem1}>{it.title}</Link></h3>
+                                <h3 className={classes.h3title} onClick={() => handClick(it)}><Link className={classes.titleItem1}>{it.title}</Link></h3>
                                 <div className={classes.titleItem2}>{it.price}</div>
-                                <Link className={classes.buyButton}>mua ngay</Link>
+                                <Link className={classes.buyButton} onClick={() => handClick(it)}>mua ngay</Link>
                             </div>
 
                             </div>
@@ -271,7 +271,7 @@ const Listitem = () => {
                             sanpham.map((item,index)=>{
 
                                 return(<>
-                                    <div className={classes.titleLeft} >{item.nameItem}</div>
+                                    <div className={classes.titleLeft} id={item.link} >{item.nameItem}</div>
                                     {
                                         item.data && item.data.length && 
                                        <Grid className={classes.wrapItem} item xs={12}>

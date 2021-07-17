@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 // import { Paper } from '@material-ui/core';
-import {petItemhomepage} from '../../../assets/images/Petitem'
+import {petItemhomepage} from '../../../assets/images/Petitem';
+import { useHistory } from "react-router-dom";
+import {saveToLocal} from '../../../ulits';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -163,7 +165,7 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #666666',
     color: 'white',
     borderRadius: '3px',
-    background: 'linear-gradient(to left, #000 50%, #EA8025 50%) right',
+    background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
     backgroundSize: '200%',
     transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
     margin : '20px 10px',
@@ -236,7 +238,13 @@ backgroundItem : {
 
 export default function Petitemhomepage() {
   const classes = useStyles();
+  let history = useHistory();
+  
+  const handClick = (item) => {
 
+    saveToLocal('detail-pet',item);
+    history.push("/Detail-pet-item/");
+  }
   return (
     <div className={classes.root}>
     <Grid container spacing={3} classes={{"spacing-xs-3":classes.spacing}}>
@@ -252,12 +260,12 @@ export default function Petitemhomepage() {
                     return(
                       <>
                       <Grid  item xs={6} lg={4}>
-                            <div className={classes.backgroundItem}>
+                            <div className={classes.backgroundItem} onClick={()=> handClick(item)}>
                                 <div className={classes.overimg}><Link><img className={classes.images} src={item.img} alt="" /></Link></div>
                                 <div className={classes.inforTitle}>
-                                    <h3 className={classes.h3title}><Link className={classes.titleItem1}>{item.title}</Link></h3>
+                                    <h3 className={classes.h3title} onClick={()=> handClick(item)}><Link className={classes.titleItem1}>{item.title}</Link></h3>
                                     <div className={classes.titleItem2}>{item.price}</div>
-                                    <Link className={classes.buyButton}>mua ngay</Link>
+                                    <Link className={classes.buyButton} onClick={()=> handClick(item)}>mua ngay</Link>
                                 </div>
 
                             </div>

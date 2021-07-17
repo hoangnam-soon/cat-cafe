@@ -14,6 +14,11 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    '& MuiStepIcon-root' : {
+      color  : '#EA8025'
+    }
+
+
   },
   button: {
     marginRight: theme.spacing(1),
@@ -62,6 +67,21 @@ const useStyles = makeStyles((theme) => ({
 
   },
   titlenametotal : {
+    fontFamily : 'Oswald',
+      fontSize :18,
+      fontWeight : '500',
+      padding : '7px',
+      
+     '&:after':{
+        content: "''",
+        width: "100%",
+        height: "2px",
+        background: "#EA8025",
+        opacity: 0.5
+     },
+     "@media (max-width : 1024px)": {
+      margin: 'auto',
+    },
     "@media (max-width : 576px)": {
       display :'none'
   },
@@ -244,7 +264,7 @@ export default function HorizontalNonLinearStepper() {
 
 
              <Grid container spacing={0}>
-                     <Grid className={classes.titleright} className={classes.titlenametotal} item lg={12}>
+                     <Grid className={classes.titlenametotal}  item lg={12}>
                          Cộng giỏ hàng
                      </Grid>
                      <Grid className={classes.titleright} item lg={6}>

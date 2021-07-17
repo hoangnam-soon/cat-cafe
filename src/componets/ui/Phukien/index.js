@@ -104,15 +104,13 @@ const useStyles = makeStyles({
 },
    },
    titleLeft : {
-//     '&:after':{
-//       content: '""',
-//       width: '50%',
-//       height: '4px',
-//       backgroundColor: '#EA8025',
-//       display: 'block',
+    '&:hover':{
+      color :'#EA8025'
    
       
-//   },
+  },
+  cursor: 'pointer',
+  transition :'all 0.4s',
   fontSize: '16px',
   textTransform: 'uppercase',
   fontFamily: 'Oswald',
@@ -120,6 +118,7 @@ const useStyles = makeStyles({
   width: 'fit-content',
   padding : '12px 20px',
   fontWeight: '500',
+ 
   '@media (max-width : 1200px)':{
     fontSize:'18px',
     padding : '8px 10px',
@@ -168,7 +167,9 @@ const Phukien = () => {
                         petitem.map((item,index)=>{
                            
                             return(
-                                <div className={classes.titleLeft}>{item.name}</div>
+                                <div className={classes.titleLeft} onClick= {() => {
+                                  document.getElementById(item.link).scrollIntoView({ behavior: 'smooth', block: 'center' })
+                                }}>{item.name}</div>
                             )
                         })
                      }

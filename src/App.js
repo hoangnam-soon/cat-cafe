@@ -11,40 +11,41 @@ import Item from './pages/Item';
 import Petitem from "./pages/Petitem";
 import Blog from "./pages/Blog";
 import Cart from "./pages/Cart";
-import Deatilsanpham from './pages/Detailsanpham';
+import Detailsanpham from './pages/Detailsanpham';
 import Detailphukien from "./pages/Detailphukien";
-
+import ScrollToTop from './hook/ScrollToTop'
 
 
 function App() {
 
 return (
   <Router>
+  <ScrollToTop />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path ="/Store/">
+        <Route path ="/Store">
           <Store/>
         </Route>
-        <Route path ="/Item/">
+        <Route path ="/Item">
           <Item/>
         </Route>
-        <Route path ="/Pet-item/">
+        <Route path ="/Pet-item">
           <Petitem/>
         </Route>
-        <Route path ="/Blog/">
+        <Route path ="/Blog">
           <Blog/>
         </Route>
-        <Route path ="/Cart/">
+        <Route path ="/Cart">
           <Cart/>
         </Route>
-        <Route path ="/Detail-item/">
-          <Deatilsanpham/>
+        <Route path ="/Detail-item">
+          <Detailsanpham/>
         </Route>
-        {/* <Route path ="/Detail-pet-item/">
-          <Deatailphukien/>
-        </Route> */}
+        <Route path ="/Detail-pet-item">
+          <Detailphukien/>
+        </Route>
 
 
       </Switch>

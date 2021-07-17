@@ -47,7 +47,7 @@ import React from 'react';
 
   export const sanpham = [
 
-   {
+   {   link : 'cafe',
       nameItem : 'cafe',
       data : [
         {
@@ -84,6 +84,7 @@ import React from 'react';
       ]
     } ,
      {
+      link : 'tea',
       nameItem : 'trà',
       data : [
 
@@ -129,6 +130,7 @@ import React from 'react';
     },
 
      {
+      link : 'matcha',
       nameItem: 'matcha & chocolate',
       data : [
 
@@ -172,7 +174,8 @@ import React from 'react';
   
       ]
     },
-{
+{ 
+  link : 'cake',
   nameItem: 'cake',
   data :  [
 

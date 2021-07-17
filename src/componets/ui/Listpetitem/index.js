@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { petitem } from '../../../assets/images/Petitem';
+import { useHistory } from "react-router-dom";
+import {saveToLocal} from '../../../ulits';
 
 const useStyles =makeStyles({
 
@@ -218,6 +220,14 @@ const useStyles =makeStyles({
 const Listpetitem = () => {
 
   const classes = useStyles();
+  let history = useHistory();
+  
+  const handClick = (item) => {
+
+    saveToLocal('detail-pet',item);
+    history.push("/Detail-pet-item/");
+  }
+
 
     const renderlistData= (list) =>{
                
@@ -225,12 +235,12 @@ const Listpetitem = () => {
             {
                 list.length && list.map((it,index)=>{
                     return(<><Grid classes={{"grid-xs-6":classes.backgroundItem}}  item xs={6} xxl={4}>
-                            <div>
+                            <div onClick = {() => handClick(it)}>
                                 <div className={classes.overimg}><Link><img className={classes.images} src={it.img} alt="" /></Link></div>
                                 <div className={classes.inforTitle}>
-                                    <h3 className={classes.h3title}><Link className={classes.titleItem1}>{it.title}</Link></h3>
+                                    <h3 className={classes.h3title} onClick = {() => handClick(it)}><Link className={classes.titleItem1}>{it.title}</Link></h3>
                                     <div className={classes.titleItem2}>{it.price}</div>
-                                    <Link className={classes.buyButton}>mua ngay</Link>
+                                    <Link className={classes.buyButton} onClick = {() => handClick(it)}>mua ngay</Link>
                                 </div>
 
                             </div>
@@ -257,7 +267,7 @@ const Listpetitem = () => {
                             petitem.map((item,index)=>{
 
                                 return(<>
-                                    <div className={classes.titleLeft} >{item.name}</div>
+                                    <div className={classes.titleLeft} id={item.link} >{item.name}</div>
                                     {
                                         item.data && item.data.length && 
                                        <Grid className={classes.wrapItem} item xs={12}>

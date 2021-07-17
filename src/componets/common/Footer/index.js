@@ -101,7 +101,7 @@ export default function Footer() {
                     <div><Link  className={classes.LinkFooter} to='/Store/' >Cửa hàng</Link></div>  
                     <div><Link className={classes.LinkFooter} to= '/Item/'>Sản phẩm</Link></div>   
                     <div><Link className={classes.LinkFooter} to= '/Pet-item/'>Phụ kiện pet</Link></div>   
-                    <div><Link className={classes.LinkFooter} to= '/Blog/'>Blog</Link></div>  
+                    <div><Link className={classes.LinkFooter} to= '/Blog'>Blog</Link></div>  
                 </div>
           </div>
         </Grid>

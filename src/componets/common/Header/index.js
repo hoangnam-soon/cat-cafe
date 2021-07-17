@@ -34,6 +34,7 @@ const useStyles =makeStyles({
      color : 'white',
      overflow: 'inherit',
      width: 'auto',
+     cursor : 'pointer',
      margin : '7px',
      "@media (max-width : 768px)": {
         display: 'none',
@@ -62,6 +63,7 @@ const useStyles =makeStyles({
       border: '1px solid #666666',
       color: 'black',
       borderRadius: '3px',
+      cursor : 'pointer',
       background: 'linear-gradient(to left, #fff 50%, #cf4d24 50%) right',
       backgroundSize: '200%',
       transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
@@ -119,9 +121,15 @@ const Header = ({activeMenu}) => {
     ]
 
     const onClickOutSideSearchBox = (e) => {
-        console.log(e)
-        // check xem co phai nut search ko 
-        setShowSearchBox(false)
+        var dom = e.target
+        var search = document.getElementById("search-icon");
+        const isContain = dom.contains(search)
+        // check xem co phai nut search ko , neu ko thì set la false
+
+        if(!isContain) {
+            setShowSearchBox(false)
+        }
+        
 
         // e.value.path[0] == setShowSearchBox() ? setShowSearchBox(true)
     }
@@ -135,8 +143,8 @@ const Header = ({activeMenu}) => {
             }
             
             <div className={classes.headerRight}>
-            <Link to ='/Cart/'><Icon className= "fas fa-shopping-cart default-icon" classes ={{root:classes.cartIcon}} style={{color:'white'}}   /></Link> 
-            <Icon className="fas fa-search default-icon" classes ={{root:classes.searchIcon}} style={{color:'white'}}  onClick={() =>setShowSearchBox(!showSearchBox)}/>
+            <Link to ='/Cart/'><Icon  className= "fas fa-shopping-cart default-icon" classes ={{root:classes.cartIcon}} style={{color:'white'}}   /></Link> 
+            <Icon id="search-icon" className="fas fa-search default-icon" classes ={{root:classes.searchIcon}} style={{color:'white'}}  onClick={() =>setShowSearchBox(!showSearchBox)}/>
             <button  onClick={()=>setIsOpenLogin(!isOpenLogin)} className={classes.login}>Đăng nhập</button>
             
              <Login open={isOpenLogin} closeLogin={()=>setIsOpenLogin(!isOpenLogin)}/>

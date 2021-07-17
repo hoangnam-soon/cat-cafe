@@ -36,10 +36,16 @@ const useStyles = makeStyles ({
     marginRight : 10,
     cursor: 'pointer'
    }, 
+   number : {
+    margin : 'auto',
+   },
    iconnumber : {
     // padding: 10,
-    margin : 'auto'
+    
     // fontSize :14
+     '@media (max-width :576px)':{
+      marginLeft  : 15
+     }
    },
    nameitem : {
        fontFamily : 'Oswald',
@@ -119,7 +125,7 @@ const Confirm = () => {
                 <Grid className={classes.price}  item xs={2}>
                     200,000 Đ
                 </Grid>
-                <Grid className={classes.iconnumber} item xs={2}>
+                <Grid className={classes.number} item xs={2}>
                         
                        <span className={classes.iconnumber}>2</span>
                        
@@ -144,7 +150,7 @@ const Confirm = () => {
                 <Grid className={classes.price} item xs={2}>
                     200,000 Đ
                 </Grid>
-                <Grid item xs={2}>
+                <Grid className={classes.number} item xs={2}>
                       
                        <span className={classes.iconnumber}>2</span>
                        

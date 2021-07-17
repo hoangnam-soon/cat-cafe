@@ -109,15 +109,13 @@ const useStyles = makeStyles({
 
    },
    titleLeft : {
-//     '&:after':{
-//       content: '""',
-//       width: '50%',
-//       height: '4px',
-//       backgroundColor: '#EA8025',
-//       display: 'block',
-   
-      
-//   },
+ '&:hover':{
+  color :'#EA8025'
+
+  
+},
+cursor: 'pointer',
+transition :'all 0.4s',
   fontSize: '16px',
   textTransform: 'uppercase',
   fontFamily: 'Oswald',
@@ -173,7 +171,9 @@ const Sanpham = () => {
                         sanpham.map((item,index)=>{
                            
                             return(
-                                <div className={classes.titleLeft}>{item.nameItem}</div>
+                                <div className={classes.titleLeft} onClick= {() => {
+                                  document.getElementById(item.link).scrollIntoView({ behavior: 'smooth', block: 'center' })
+                                }}>{item.nameItem}</div>
                             )
                         })
                      }
