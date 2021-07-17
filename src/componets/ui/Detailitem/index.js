@@ -237,9 +237,12 @@ const useStyles = makeStyles({
     },
     another : {
       marginTop :40,
-      padding :'10px 0px',
-      "@media (max-width:768px)":{
-        padding : '10px 0px'
+      padding :'10px 50px',
+      // "@media (max-width:768px)":{
+      //   padding : '10px 50px'
+      //  },
+       "@media (max-width:576px)":{
+        padding : ' 0px'
        },
 
     },
