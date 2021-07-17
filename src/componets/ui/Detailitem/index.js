@@ -239,7 +239,7 @@ const useStyles = makeStyles({
       marginTop :40,
       padding :'10px 0px',
       "@media (max-width:768px)":{
-        padding : '10px 50px'
+        padding : '10px 0px'
        },
 
     },
@@ -361,10 +361,10 @@ const Detailitem = () => {
                                     {renderDetailitem()}
 
                                
-                                <Grid className={classes.another}  item lg={12}>
+                                <Grid className={classes.another}  item xs={12}>
                                 <h3 className={classes.h3}> Một số sản phẩm khác</h3>
                               <Grid container spacing={0}>
-                              <Grid  item lg={12}>
+                              <Grid  item xs={12} >
                                 
                               </Grid>
                                   {
