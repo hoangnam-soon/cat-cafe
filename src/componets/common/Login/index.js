@@ -56,6 +56,7 @@ const useStyles =makeStyles({
   fontSize: "14px",
   textTransform: "none",
   float: "right",
+  textDecoration : 'underline',
   marginTop:'10px',
   '&:hover' : {
     color : '#EA8025',
@@ -69,18 +70,21 @@ const useStyles =makeStyles({
   }, 
   login : {
     '&:hover':{
-        backgroundPosition: 'left',
-        color : 'white',
+        // backgroundPosition: 'left',
+        background : 'white',
+        color : 'black',
   
       },
       display: 'inline-block',
       padding: '10px 20px',
       border: '1px solid #666666',
-      color: 'black',
+      color: 'white',
       borderRadius: '3px',
-      background: 'linear-gradient(to left, #fff 50%, #000 50%) right',
-      backgroundSize: '200%',
-      transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
+      background : 'black',
+      cursor : 'pointer',
+      // background: 'linear-gradient(to left, #fff 50%, #000 50%) right',
+      // backgroundSize: '200%',
+      transition: 'all 0.7s ',
       marginLeft: '5px !important',
       fontSize : 'medium'
  },
@@ -88,11 +92,12 @@ const useStyles =makeStyles({
    fontSize :14,
  },
  add :{
-  color: "red",
+  color: "black",
 fontSize: "14px",
 textTransform: "none",
-float: "right",
-margin:'10px',
+textDecoration : 'underline',
+// float: "right",
+// margin:'10px',
 '&:hover' : {
   color : '#EA8025',
   cursor: 'pointer',
@@ -108,6 +113,14 @@ loginIcon : {
     cursor: 'pointer',
   }
   
+},
+divadd : {
+  margin : '20px 0px',
+  display : 'inline-block',
+  float : 'right',
+  // '&a' : {
+  //   textDecoration : 'underline'
+  // }
 }
     
 })
@@ -157,9 +170,9 @@ const Login = ({open,closeLogin}) => {
           
           </div>
           
-          <div>
-            
-            <Link className={classes.add}>Chưa có tài khoản? Đăng ký ngay</Link>
+          <div className={classes.divadd}>
+             <span>Chưa có tài khoản?</span>
+            <Link className={classes.add}> Đăng ký ngay</Link>
           </div>
     
         </div>

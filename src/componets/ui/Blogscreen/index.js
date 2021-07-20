@@ -173,7 +173,7 @@ const Blogscreen = () => {
                 <Grid container spacing={0}>  
                     <Grid classes={{"root":classes.wrapbloginfor}} item xs={8}>
                     <div>
-                        <h2>NHỮNG THỨ KHÔNG NÊN CHO "HOÀNG THƯỢNG" CỦA BẠN ĂN</h2>
+                        <h2>Những thứ không nên cho "Hoàng thượng" của bạn ăn</h2>
                         <div><img className={classes.images}  src="https://github.com/hoangnam-soon/hoangnam-soon.github.io/blob/main/Cat-Cafe/img/BLOG/blog-nh%E1%BB%AFng-th%E1%BB%A9-kh%C3%B4ng-n%C3%AAn.jpg?raw=true" alt="" /></div>
                         <div>
                             <h3>Khoai tây sống</h3>

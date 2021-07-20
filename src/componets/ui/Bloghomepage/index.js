@@ -74,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
       color : 'white',
 
     },
+    fontSize : 16,
     display: 'inline-block',
     padding: '8px 15px',
     border: '1px solid #666666',
@@ -119,12 +120,12 @@ const useStyles = makeStyles((theme) => ({
 
   },
   titleItem2 :{
-    fontSize:16,
+    fontSize:18,
     // textTransform : 'uppercase',
     margin:'15px 10px',
     color: 'black',
-    fontFamily: 'Oswald',
-    // fontWeight:'500',
+    fontFamily: 'Charm',
+    // fontWeight:'600',
     "@media (max-width:768px)":{
       margin : '10px 10px'
       
@@ -142,6 +143,7 @@ const useStyles = makeStyles((theme) => ({
       color : 'black',
 
     },
+    fontFamily : 'Bebas Neue',
     display: 'inline-block',
     padding: '8px 15px',
     border: '1px solid #666666',

@@ -12,7 +12,7 @@ import {saveToLocal} from '../../../ulits';
 
 const useStyles = makeStyles({
     root : {
-        backgroundColor: '#f2f2f2',
+        backgroundColor: '#f5f5f5',
         marginTop: -6,
        padding: 20,
     '@media (max-width :576px)': {
@@ -32,10 +32,10 @@ const useStyles = makeStyles({
       maxWidth : 280,
   
       width : '100%',
-      transition : 'all 0.4s',
-      "&:hover" : {
-        transform: "scale(1.04)"
-      }, 
+      // transition : 'all 0.4s',
+      // "&:hover" : {
+      //   transform: "scale(1.04)"
+      // }, 
       '@media (max-width : 1024px)':{
         maxWidth : 400
     
@@ -54,9 +54,10 @@ const useStyles = makeStyles({
     },
   titleItem1 :{
     color : 'black',
-    fontSize:18,
-    fontFamily: 'Oswald',
-    fontWeight:'500',
+    fontSize:22,
+    fontFamily: 'Charm',
+     textTransform : 'capitalize',
+     fontWeight:'600',
     marginLeft : 10,
     transition : 'all 0.4s',
     '&:hover' : {
@@ -74,12 +75,13 @@ const useStyles = makeStyles({
 
   },
   titleItem2 :{
-    fontSize:18,
-    textTransform : 'uppercase',
+    fontSize:20,
+    // textTransform : 'uppercase',
     margin:'15px 10px',
     color: '#EA8025',
-    fontFamily: 'Oswald',
-    fontWeight:'500',
+    fontFamily: 'Charm',
+    textTransform : 'capitalize',
+    fontWeight:'600',
     "@media (max-width:768px)":{
       margin : '10px 10px'
       
@@ -93,41 +95,43 @@ const useStyles = makeStyles({
   },
   buyButton :{
     '&:hover':{
-      backgroundPosition: 'left',
+      // backgroundPosition: 'left',
+      background : 'white',
       color : 'black',
 
     },
+    fontFamily : 'Bebas Neue',
     display: 'inline-block',
     padding: '8px 15px',
     border: '1px solid #666666',
     color: 'white',
-    cursor: 'pointer',
     borderRadius: '3px',
-    background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
-    backgroundSize: '200%',
-    transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
-    margin : '20px 10px',
-    
-    
-    // "@media (max-width:768px)":{
-    //   margin : '10px 20px'
-      
-    // },
+    background : '#EA8025',
+    // background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
+    // backgroundSize: '200%',
+    transition: 'all 0.7s',
+    margin: '30px 0px',
+    float : 'left',
     "@media (max-width:1200px)":{
-      margin : '20px 10px'
+      margin : '20px 0px',
+      fontSize : '14px'
       
-    }, '@media (max-width : 768px)':{
-      fontSize:'14px',
-     
-  
     },
-    '@media (max-width : 576px)':{
-      fontSize:'10px',
-     
-    }
+    
+    "@media (max-width:768px)":{
+      margin : '10px 0px',
+      
+      
+    },
+    
+    "@media (max-width:576px)":{
+      margin : '10px 0px',
+      fontSize : '12px'
+      
+    },
 
 
-       },
+},
        
 //   backgroundItem : {
 //   backgroundColor : 'white',
@@ -151,10 +155,10 @@ const useStyles = makeStyles({
         },
       },
       nameitem: {
-        fontWeight: 500,
-        fontSize: "20px",
-        fontFamily: "'Oswald'",
-        textTransform: "uppercase"
+        fontSize:30,
+        fontFamily: 'Charm',
+        textTransform : 'capitalize',
+        fontWeight:'600',
       },
      titleitem : {
         fontWeight: 500,
@@ -178,33 +182,40 @@ const useStyles = makeStyles({
       },
 
       iconitem : {
-        fontSize: "x-large",
+        fontSize: 24,
+        color: '#ea8025',
+        opacity : '0.8',
         marginRight : 10,
         cursor: 'pointer'
        }, 
        iconnumber : {
         marginRight : 10,
+        fontSize: 24,
        },
       putinButton :{
         '&:hover':{
-          backgroundPosition: 'left',
+          // backgroundPosition: 'left',
+          background : 'white',
           color : 'black',
     
         },
         fontWeight: 500,
-        fontSize: "20px",
+        fontSize: "18px",
         fontFamily: "'Oswald'",
         textTransform: "uppercase",
         display: 'inline-block',
-        padding: '10px',
+        // padding: '10px',
         border: '1px solid #666666',
         color: 'white',
         borderRadius: '3px',
         cursor: 'pointer',
-        background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
-        backgroundSize: '200%',
-        transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
-        marginRight: 150,
+        background : '#ea8025',
+        // background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
+        // backgroundSize: '200%',
+        transition: 'all 1s',
+        // marginRight: 200,
+        justifySelf: 'flex-start',
+          padding: '0px 20px',
         
         
         // "@media (max-width:768px)":{
@@ -220,7 +231,8 @@ const useStyles = makeStyles({
       
         // },
         '@media (max-width : 768px)':{
-          marginRight : 90,
+          // marginRight : 120,
+          padding : '20px',
           marginTop : 10
          
         }
@@ -314,18 +326,18 @@ const Detailitem = () => {
       const renderDetailitem = () =>{
 
           return(<>
-               <Grid className={classes.divimg} item lg={6} sm={4} xs={12}>
+               <Grid className={classes.divimg} item lg={6} sm={6} xs={12}>
                    <img className={classes.img} src={dataItem.img} alt="" />
                </Grid>
-               <Grid className={classes.inputCart} item lg={6} sm={8} xs={12}>
+               <Grid className={classes.inputCart} item lg={6} sm={6}  xs={12}>
                    <div className={classes.nameitem}>{dataItem.title}</div>
-                   <div className={classes.titleitem}>Giá bán : <span className={classes.priceitem}>{dataItem.price}Đ</span></div>
+                   <div className={classes.titleitem}>Giá bán : <span className={classes.priceitem}>{dataItem.price}</span></div>
                    <div className={classes.titleitem} >Đơn vị : {dataItem.unit}</div>
                    <div className={classes.titleitem}>Tình trạng : <span className={classes.priceitem}>Còn hàng</span></div>
                    <div>
-                       <span className={classes.iconitem}><i class="far fa-minus-square"></i></span>
+                       <span className={classes.iconitem}><i class="fas fa-minus-circle"></i></span>
                        <span className={classes.iconnumber}>1</span>
-                       <span className={classes.iconitem}><i class="far fa-plus-square"></i></span>
+                       <span className={classes.iconitem}><i class="fas fa-plus-circle"></i></span>
                    </div>
                    <button className={classes.putinButton}>thêm vào giỏ hàng</button>
                </Grid>

@@ -11,7 +11,7 @@ const useStyles = makeStyles({
 
 
   rootItem : {
-    backgroundColor :'#F2F2F2',
+    backgroundColor :'#f5f5f5',
   },
 
   spacing : {
@@ -80,7 +80,7 @@ const useStyles = makeStyles({
 
    },
    boxmenuLeft : {
-    backgroundColor:'#f3c7c7',
+    backgroundColor:'white',
     height: '600px',
     margin :10,
     '@media (max-width : 1200px)':{

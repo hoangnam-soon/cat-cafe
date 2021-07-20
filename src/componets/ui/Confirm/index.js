@@ -8,7 +8,8 @@ import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles ({
     root : {
-        marginTop :-15
+        marginTop :-15,
+        padding :20
     },
     boxinput: {
         margin : '15px 0px',

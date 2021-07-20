@@ -54,8 +54,9 @@ const useStyles =makeStyles({
 },
  login : {
     '&:hover':{
-        backgroundPosition: 'left',
-        color : 'white',
+       // backgroundPosition: 'left',
+      backgroundColor : '#EA8025',
+        // color : 'white',
   
       },
       display: 'inline-block',
@@ -64,9 +65,10 @@ const useStyles =makeStyles({
       color: 'black',
       borderRadius: '3px',
       cursor : 'pointer',
-      background: 'linear-gradient(to left, #fff 50%, #cf4d24 50%) right',
-      backgroundSize: '200%',
-      transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
+      background : 'white',
+    // background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
+    // backgroundSize: '200%',
+    transition: 'all 0.4s ',
       marginLeft: '5px !important',
       "@media (max-width : 768px)": {
         display: 'none',

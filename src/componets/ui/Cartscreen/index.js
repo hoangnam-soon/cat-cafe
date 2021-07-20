@@ -14,11 +14,14 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    '& MuiStepIcon-root' : {
-      color  : '#EA8025'
+    
+
+
+  },
+  colorIcon : {
+    '& svg' : {
+      color  : '#EA8025 !important'
     }
-
-
   },
   button: {
     marginRight: theme.spacing(1),
@@ -98,7 +101,8 @@ const useStyles = makeStyles((theme) => ({
   },
   buyButton :{
     '&:hover':{
-      backgroundPosition: 'left',
+      // backgroundPosition: 'left',
+      background : 'white',
       color : 'black',
 
     },
@@ -108,9 +112,10 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     fontWeight : 700,
     borderRadius: '3px',
-    background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
-    backgroundSize: '200%',
-    transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
+    background : '#EA8025',
+    // background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
+    // backgroundSize: '200%',
+    transition: 'all 0.7s',
     margin : '30px 0px',
     
     
@@ -234,8 +239,8 @@ export default function HorizontalNonLinearStepper() {
           <Grid className={classes.case} item lg={8}  sm={10}>
                 <Stepper nonLinear activeStep={activeStep}>
                     {steps.map((label, index) => (
-                    <Step key={label}>
-                        <StepButton onClick={handleStep(index)} completed={completed[index]}>
+                    <Step  key={label}>
+                        <StepButton classes={{root:classes.colorIcon}} onClick={handleStep(index)} completed={completed[index]}>
                         {label}
                         </StepButton>
                     </Step>

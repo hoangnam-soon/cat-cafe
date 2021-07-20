@@ -11,7 +11,7 @@ const useStyles = makeStyles({
 
 
   rootItem : {
-    backgroundColor :'#F2F2F2',
+    backgroundColor :'#f5f5f5',
   },
 
   spacing : {

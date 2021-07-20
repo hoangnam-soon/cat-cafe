@@ -13,10 +13,10 @@ const useStyles =makeStyles({
     images : {
         maxWidth : 255,
         width : '100%',
-        transition : 'all 0.5s',
-        "&:hover": {
-          transform: "scale(1.03)"
-        },
+        // transition : 'all 0.5s',
+        // "&:hover": {
+        //   transform: "scale(1.03)"
+        // },
         "@media (max-width:1475px)":{
           maxWidth : 210
            
@@ -83,10 +83,10 @@ const useStyles =makeStyles({
     titleItem1 :{
         color : 'black',
         // textAlign: 'start',
-        fontSize:16,
-        fontFamily: 'Oswald',
-        fontWeight:'500',
-        textTransform: 'uppercase',
+        fontSize:22,
+        fontFamily: 'Charm',
+        textTransform : 'capitalize',
+        fontWeight:'600',
         transition : 'all 0.4s',
         '&:hover':{
           color : '#EA8025'
@@ -110,12 +110,12 @@ const useStyles =makeStyles({
     
       },
       titleItem2 :{
-        fontSize:16,
+        fontSize:20,
         margin : '10px 0px',
         // textAlign: 'start',
         color: '#EA8025',
-        fontFamily: 'Oswald',
-        fontWeight:'500',
+        fontFamily: 'Charm',
+        fontWeight:'600',
         textTransform: 'uppercase',
        
         "@media (max-width:1200px)":{
@@ -138,18 +138,21 @@ const useStyles =makeStyles({
       },
       buyButton :{
         '&:hover':{
-          backgroundPosition: 'left',
+          // backgroundPosition: 'left',
+          background : 'white',
           color : 'black',
     
         },
+        fontFamily : 'Bebas Neue',
         display: 'inline-block',
         padding: '8px 15px',
         border: '1px solid #666666',
         color: 'white',
         borderRadius: '3px',
-        background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
-        backgroundSize: '200%',
-        transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
+        background : '#EA8025',
+        // background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
+        // backgroundSize: '200%',
+        transition: 'all 0.7s',
         margin: '30px 0px',
         float : 'left',
         "@media (max-width:1200px)":{

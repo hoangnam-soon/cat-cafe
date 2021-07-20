@@ -114,7 +114,7 @@ import React from 'react';
         },
         {
           img :'https://github.com/hoangnam-soon/hoangnam-soon.github.io/blob/main/Cat-Cafe/img/Food-Drink/Tea/tra-den-macchiato_facfdd980ca547be93974edb7f16d3b7_large.jpg?raw=true',
-          title : 'TRÀ ĐEN MACCHIATO',
+          title : 'trà đen macchiato',
           price:'45,000 đ',
           unit : 'Cốc'
         },

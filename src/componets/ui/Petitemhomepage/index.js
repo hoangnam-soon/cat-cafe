@@ -10,7 +10,7 @@ import {saveToLocal} from '../../../ulits';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    background : '#f2f2f2',
+    background : '#f5f5f5',
     
     
   },
@@ -28,10 +28,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth : 396,
 
     width : '100%',
-    transition : 'all 0.4s',
-    "&:hover" : {
-      transform: "scale(1.04)"
-    },
+    // transition : 'all 0.4s',
+    // "&:hover" : {
+    //   transform: "scale(1.04)"
+    // },
     '@media (max-width : 1200px)':{
       maxWidth : "none"
   
@@ -89,6 +89,7 @@ const useStyles = makeStyles((theme) => ({
       color : 'white',
 
     },
+    fontSize : 16,
     display: 'inline-block',
     padding: '8px 15px',
     border: '1px solid #666666',
@@ -115,10 +116,10 @@ const useStyles = makeStyles((theme) => ({
   },
   titleItem1 :{
     color : 'black',
-    fontSize:18,
-    textTransform : 'uppercase',
-    fontFamily: 'Oswald',
-    fontWeight:'500',
+    fontSize:24,
+    fontFamily: 'Charm',
+    fontWeight:'600',
+    textTransform : 'capitalize',
     marginLeft : 10,
     transition: 'all 0.4s',
     '&:hover' : {
@@ -141,8 +142,8 @@ const useStyles = makeStyles((theme) => ({
     textTransform : 'uppercase',
     margin:'15px 10px',
     color: '#EA8025',
-    fontFamily: 'Oswald',
-    fontWeight:'500',
+    fontFamily: 'Charm',
+    fontWeight:'600',
     "@media (max-width:768px)":{
       margin : '10px 10px'
       
@@ -156,18 +157,21 @@ const useStyles = makeStyles((theme) => ({
   },
   buyButton :{
     '&:hover':{
-      backgroundPosition: 'left',
+      // backgroundPosition: 'left',
+      backgroundColor : 'white',
       color : 'black',
 
     },
+    fontFamily : 'Bebas Neue',
     display: 'inline-block',
     padding: '8px 15px',
     border: '1px solid #666666',
     color: 'white',
     borderRadius: '3px',
-    background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
-    backgroundSize: '200%',
-    transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
+    background : '#EA8025',
+    // background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
+    // backgroundSize: '200%',
+    transition: 'all 0.4s ',
     margin : '20px 10px',
     
     
@@ -193,7 +197,7 @@ const useStyles = makeStyles((theme) => ({
 
 inforTitle:{
   padding: '12px 15px',
-  backgroundColor : '#f3c7c7',
+  // backgroundColor : '#f3c7c7',
   
   
   

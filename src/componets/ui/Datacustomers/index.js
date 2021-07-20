@@ -19,7 +19,8 @@ const useStyles = makeStyles ({
        fontSize : 20,
     },
     root : {
-        marginTop : -15
+        marginTop : -15,
+        padding : 20
     }
 
 });

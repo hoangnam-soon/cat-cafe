@@ -9,6 +9,9 @@ const useStyles = makeStyles({
    images : {
        width :'100%',
    },
+   root : {
+       padding :20,
+   },
    boxitem :{
        
 
@@ -39,12 +42,24 @@ const useStyles = makeStyles({
     }
    },
    iconitem : {
-    // fontSize: "x-large",
+    fontSize: 24,
+    color: '#ea8025',
+    opacity : '0.8',
     marginRight : 10,
-    cursor: 'pointer'
+    cursor: 'pointer',
+    "@media (max-width : 576px)": {
+        // margin: 'auto',
+        fontSize :18
+    }
+    
    }, 
    iconnumber : {
     marginRight : 10,
+    fontSize: 24,
+    "@media (max-width : 576px)": {
+        // margin: 'auto',
+        fontSize :18
+    }
    },
    nameitem : {
        fontFamily : 'Oswald',
@@ -114,9 +129,9 @@ const Giohang = () => {
                     200,000 Đ
                 </Grid>
                 <Grid item xs={2}>
-                        <span className={classes.iconitem}><i class="far fa-minus-square"></i></span>
+                        <span className={classes.iconitem}><i class="fas fa-minus-circle"></i></span>
                        <span className={classes.iconnumber}>2</span>
-                       <span className={classes.iconitem}><i class="far fa-plus-square"></i></span>
+                       <span className={classes.iconitem}><i class="fas fa-plus-circle"></i></span>
                 </Grid>
                 <Grid className={classes.totalprice} item xs={2}>
                    400,000 Đ
@@ -139,9 +154,9 @@ const Giohang = () => {
                     200,000 Đ
                 </Grid>
                 <Grid item xs={2}>
-                        <span className={classes.iconitem}><i class="far fa-minus-square"></i></span>
+                        <span className={classes.iconitem}><i class="fas fa-minus-circle"></i></span>
                        <span className={classes.iconnumber}>2</span>
-                       <span className={classes.iconitem}><i class="far fa-plus-square"></i></span>
+                       <span className={classes.iconitem}><i class="fas fa-plus-circle"></i></span>
                 </Grid>
                 <Grid className={classes.totalprice} item xs={2}>
                    400,000 Đ

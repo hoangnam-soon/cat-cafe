@@ -75,6 +75,7 @@ allButton : {
     color : 'white',
 
   },
+  fontSize :16,
   display: 'inline-block',
   padding: '8px 15px',
   border: '1px solid #666666',

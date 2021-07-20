@@ -12,7 +12,7 @@ import {saveToLocal} from '../../../ulits';
 
 const useStyles = makeStyles({
     root : {
-        backgroundColor: '#f2f2f2',
+        backgroundColor: '#f5f5f5',
         marginTop: -6,
         padding: 20,
     '@media (max-width :576px)': {
@@ -53,177 +53,192 @@ const useStyles = makeStyles({
       overflow : 'hidden'
     },
     
-  titleItem1 :{
-    color : 'black',
-    fontSize:18,
-    textTransform : 'uppercase',
-    fontFamily: 'Oswald',
-    fontWeight:'500',
-    marginLeft : 10,
-    transition: 'all 0.4s',
-    '&:hover' : {
-         color : '#EA8025',
-        //  transform :
-    },
-    // "@media (max-width:768px)":{
-    //   margin : '10px '
-      
-    // },
-    "@media (max-width:1200px)":{
-      margin : '10px '
-      
-    },
-    
-
-  },
-  titleItem2 :{
-    fontSize:18,
-    textTransform : 'uppercase',
-    margin:'15px 10px',
-    color: '#EA8025',
-    fontFamily: 'Oswald',
-    fontWeight:'500',
-    "@media (max-width:768px)":{
-      margin : '10px 10px'
-      
-    },
-    "@media (max-width:1200px)":{
-      margin : '10px '
-      
-    },
-    
-
-  },
-  buyButton :{
-    '&:hover':{
-      backgroundPosition: 'left',
+    titleItem1 :{
       color : 'black',
-
-    },
-    display: 'inline-block',
-    padding: '8px 15px',
-    border: '1px solid #666666',
-    color: 'white',
-    cursor: 'pointer',
-    borderRadius: '3px',
-    background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
-    backgroundSize: '200%',
-    transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
-    margin : '20px 10px',
-    
-    
-    // "@media (max-width:768px)":{
-    //   margin : '10px 20px'
+      fontSize:22,
+      fontFamily: 'Charm',
+       textTransform : 'capitalize',
+       fontWeight:'600',
+      marginLeft : 10,
+      transition : 'all 0.4s',
+      '&:hover' : {
+        color : '#EA8025'
+      },
+      // "@media (max-width:768px)":{
+      //   margin : '10px '
+        
+      // },
+      "@media (max-width:1200px)":{
+        margin : '10px '
+        
+      },
       
-    // },
-    "@media (max-width:1200px)":{
-      margin : '20px 10px'
-      
-    }, '@media (max-width : 768px)':{
-      fontSize:'14px',
-     
   
     },
-    '@media (max-width : 576px)':{
-      fontSize:'10px',
-     
-    }
-
-
-   },
-      allDetail : {
-            margin : '30px 0px'
-      },
-      divimg : {
-        marginTop : 20,
-      },
-      inputCart : {
-        display: 'grid',
-        /* text-align: -webkit-auto; */
-        padding: '60px 0px 0px 40px',
-        "@media (max-width:768px)":{
-          padding : '15px 30px',
-          margin :'auto'
-
-          
-        },
-      },
-      nameitem: {
-        fontWeight: 500,
-        fontSize: "20px",
-        fontFamily: "'Oswald'",
-        textTransform: "uppercase"
-      },
-     titleitem : {
-        fontWeight: 500,
-        fontSize: "18px",
-        fontFamily: "'Oswald'",
-        // textTransform: "uppercase"
-        opacity : 0.9,
-        "@media (max-width:768px)":{
-          margin : '10px 0px'
-
-          
-        },
-      },
-      priceitem : {
-        fontWeight: 500,
-        fontSize: "18px",
-        fontFamily: "'Oswald'",
-        textTransform: "uppercase",
-        color : "#EA8025",
+    titleItem2 :{
+      fontSize:20,
+      // textTransform : 'uppercase',
+      margin:'15px 10px',
+      color: '#EA8025',
+      fontFamily: 'Charm',
+      textTransform : 'capitalize',
+      fontWeight:'600',
+      "@media (max-width:768px)":{
+        margin : '10px 10px'
         
       },
-
-      iconitem : {
-        fontSize: "x-large",
-        marginRight : 10,
-        cursor: 'pointer'
-       }, 
-       iconnumber : {
-        marginRight : 10,
-       },
-      putinButton :{
-        '&:hover':{
-          backgroundPosition: 'left',
-          color : 'black',
-    
-        },
-        fontWeight: 500,
-        fontSize: "20px",
-        fontFamily: "'Oswald'",
-        textTransform: "uppercase",
-        display: 'inline-block',
-        padding: '10px',
-        border: '1px solid #666666',
-        color: 'white',
-        cursor: 'pointer',
-        borderRadius: '3px',
-        background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
-        backgroundSize: '200%',
-        transition: 'all 0.7s cubic-bezier(0.5,1.6,0.4,0.7)',
-        marginRight: 150,
+      "@media (max-width:1200px)":{
+        margin : '10px '
         
-        
-        // "@media (max-width:768px)":{
-        //   margin : '10px 20px'
-          
-        // },
-        // "@media (max-width:1200px)":{
-        //   margin : '20px 10px'
-          
-        // }, '@media (max-width : 768px)':{
-        //   fontSize:'14px',
-         
+      },
       
-        // },
-        '@media (max-width : 768px)':{
-          marginRight :90,
-          marginTop :20
-         
-        }
-      
+  
     },
+    buyButton :{
+      '&:hover':{
+        // backgroundPosition: 'left',
+        background : 'white',
+        color : 'black',
+  
+      },
+      fontFamily : 'Bebas Neue',
+      display: 'inline-block',
+      padding: '8px 15px',
+      border: '1px solid #666666',
+      color: 'white',
+      borderRadius: '3px',
+      background : '#EA8025',
+      // background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
+      // backgroundSize: '200%',
+      transition: 'all 0.7s',
+      margin: '30px 0px',
+      float : 'left',
+      "@media (max-width:1200px)":{
+        margin : '20px 0px',
+        fontSize : '14px'
+        
+      },
+      
+      "@media (max-width:768px)":{
+        margin : '10px 0px',
+        
+        
+      },
+      
+      "@media (max-width:576px)":{
+        margin : '10px 0px',
+        fontSize : '12px'
+        
+      },
+  
+  
+  },
+         
+  //   backgroundItem : {
+  //   backgroundColor : 'white',
+  //   margin : 'auto'
+  
+  // },
+  
+        allDetail : {
+              margin : '30px 0px'
+        },
+        divimg : {
+          marginTop : 20,
+        },
+        inputCart : {
+          display: 'grid',
+          /* text-align: -webkit-auto; */
+          padding: '60px 0px 0px 40px',
+          "@media (max-width:768px)":{
+            padding : '15px 30px',
+            margin : 'auto'
+          },
+        },
+        nameitem: {
+          fontSize:30,
+          fontFamily: 'Charm',
+          textTransform : 'capitalize',
+          fontWeight:'600',
+        },
+       titleitem : {
+          fontWeight: 500,
+          fontSize: "18px",
+          fontFamily: "'Oswald'",
+          // textTransform: "uppercase"
+          opacity : 0.9,
+          "@media (max-width:768px)":{
+            margin : '10px 0px'
+  
+            
+          },
+        },
+        priceitem : {
+          fontWeight: 500,
+          fontSize: "18px",
+          fontFamily: "'Oswald'",
+          textTransform: "uppercase",
+          color : "#EA8025",
+          
+        },
+  
+        iconitem : {
+          fontSize: 24,
+          color: '#ea8025',
+          opacity : '0.8',
+          marginRight : 10,
+          cursor: 'pointer'
+         }, 
+         iconnumber : {
+          marginRight : 10,
+          fontSize: 24,
+         },
+         putinButton :{
+          '&:hover':{
+            // backgroundPosition: 'left',
+            background : 'white',
+            color : 'black',
+      
+          },
+          fontWeight: 500,
+          fontSize: "18px",
+          fontFamily: "'Oswald'",
+          textTransform: "uppercase",
+          display: 'inline-block',
+          // padding: '10px',
+          border: '1px solid #666666',
+          color: 'white',
+          borderRadius: '3px',
+          cursor: 'pointer',
+          background : '#ea8025',
+          // background: 'linear-gradient(to left, #EA8025 50%, #fff 50%) right',
+          // backgroundSize: '200%',
+          transition: 'all 1s',
+          // marginRight: 200,
+          justifySelf: 'flex-start',
+            padding: '0px 20px',
+          
+          
+          // "@media (max-width:768px)":{
+          //   margin : '10px 20px'
+            
+          // },
+          // "@media (max-width:1200px)":{
+          //   margin : '20px 10px'
+            
+          // }, '@media (max-width : 768px)':{
+          //   fontSize:'14px',
+           
+        
+          // },
+          '@media (max-width : 768px)':{
+            // marginRight : 120,
+            padding : '20px',
+            marginTop : 10
+           
+          }
+        
+      },
     wrapinfor : {
         margin :'40px 0px',
         padding : '10px 20px',
@@ -317,18 +332,18 @@ const Detailpetitem = () => {
       const renderDetailpetitem = () =>{
 
           return(<>
-               <Grid className={classes.divimg} item lg={6} sm={4} xs={12}>
+               <Grid className={classes.divimg} item lg={6} sm={6} xs={12}>
                    <img className={classes.img} src={dataItem.img} alt="" />
                </Grid>
-               <Grid className={classes.inputCart} item lg={6} sm={8} xs={12}>
+               <Grid className={classes.inputCart} item lg={6} sm={6} xs={12}>
                    <div className={classes.nameitem}>{dataItem.title}</div>
                    <div className={classes.titleitem}>Giá bán : <span className={classes.priceitem}>{dataItem.price}</span></div>
                    <div className={classes.titleitem} >Đơn vị : {dataItem.unit}</div>
                    <div className={classes.titleitem}>Tình trạng : <span className={classes.priceitem}>Còn hàng</span></div>
                    <div>
-                       <span className={classes.iconitem}><i class="far fa-minus-square"></i></span>
+                        <span className={classes.iconitem}><i class="fas fa-minus-circle"></i></span>
                        <span className={classes.iconnumber}>1</span>
-                       <span className={classes.iconitem}><i class="far fa-plus-square"></i></span>
+                       <span className={classes.iconitem}><i class="fas fa-plus-circle"></i></span>
                    </div>
                    <button className={classes.putinButton}>thêm vào giỏ hàng</button>
                </Grid>
