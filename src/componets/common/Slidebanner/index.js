@@ -24,7 +24,7 @@ const Slidebanner = () => {
           </div>
           <h2 className='title-banner1'> Trong mắt Quàng thượng mèo, <br>
                       
-                      </br> Tất cả mọi thứ đề thuộc sở hữu của Mèo.</h2>
+                      </br> Tất cả mọi thứ đều thuộc sở hữu của Mèo.</h2>
         </div>
         <div className="each-fade">
           <div className="image-container">
